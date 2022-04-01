@@ -1,0 +1,6 @@
+- hosts: all
+  ignore_errors: yes
+  become: yes
+  tasks:
+   - name: creating gamutkart-app
+     shell: docker run -it -d --name gamutkart 9dnyanesh/gamutkart-image:latest

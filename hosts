@@ -1,0 +1,6 @@
+[node1]
+172.31.42.194 ansible_user=ubuntu ansible_ssh_pass=12345678
+[node2] 
+172.31.38.39 ansible_user=ubuntu ansible_ssh_pass=12345678
+[jenkins-master]
+172.31.15.134 ansible_user=ubuntu ansible_ssh_pass=12345678
