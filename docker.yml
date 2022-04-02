@@ -1,0 +1,12 @@
+- hosts: all
+  become: yes
+  ignore_errors: yes
+  tasks:
+   - name: installation of docker 
+     shell: cd /home/ubuntu && curl -fsSL https://get.docker.com -o get-docker.sh && chmod 777 -R get-docker.sh && ./get-docker.sh
+   - name: add user in docker
+     shell: usermod -aG docker ubuntu && docker ps -a
+     register: output
+   - name: debug
+     debug:
+      var: output
